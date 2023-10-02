@@ -1,0 +1,25 @@
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./header.scss";
+
+body {
+  overflow: hidden;
+}
+
+section {
+  overflow: hidden;
+}
+
+.app {
+  background: url("../resources/img/background-image.webp");
+  background: url("../resources/img/background-image.png");
+}
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+}
