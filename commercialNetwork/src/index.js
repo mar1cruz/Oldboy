@@ -1,9 +1,9 @@
 import "./scss/index.scss"
 
 const burger = document.querySelector(".burger-menu")
-const menu = document.querySelector(".menu")
+const nav = document.querySelector(".header__navigation")
 
 burger.addEventListener("click", () => {
-  menu.classList.toggle("active")
+  nav.classList.toggle("active")
   burger.classList.toggle("active")
 })
