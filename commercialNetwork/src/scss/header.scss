@@ -13,20 +13,19 @@
       width: 165px;
       height: 88px;
 
-      // @media (max-width: 1200px) {
-      //   width: 145px;
-      //   height: 68px;
-      // }
 
-      // @media (max-width: 576px) {
-      //   width: 85px;
-      //   height: 45px;
-      // }
+
+
+      @media (max-width: 576px) {
+        width: 85px;
+        height: 45px;
+      }
     }
 
-    // @media (max-width: 768px) {
-    //   margin-right: 0px;
-    // }
+    @media (max-width: 576px) {
+      margin-right: 37px;
+
+    }
   }
 
   .header__navigation {
@@ -45,9 +44,7 @@
         font-weight: 700;
         line-height: normal;
 
-        // @media (max-width: 1200px) {
-        //   font-size: 16px;
-        // }
+
       }
 
       @media (max-width: 1200px) {
@@ -55,9 +52,7 @@
       }
     }
 
-    // @media (max-width: 1200px) {
-    //   margin-right: 42px;
-    // }
+
     @media (max-width: 992px) {
       left: 100%;
       position: fixed;
@@ -94,10 +89,7 @@
 
 
     }
-    // @media (max-width: 768px) {
-    //   display: none;
-    //   max-width: 100%;
-    // }
+
   }
 
   .header__info {
@@ -119,9 +111,7 @@ z-index: 1;
       font-size: 23px;
       width: 134px;
 
-      // @media (max-width: 1200px) {
-      //   font-size: 20px;
-      // }
+
     }
 
     .info__text {
@@ -146,9 +136,9 @@ z-index: 1;
       }
     }
 
-    // @media (max-width: 576px) {
-    //   display: none;
-    // }
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 
   .header__city {
@@ -182,6 +172,10 @@ z-index: 1;
             transform: rotate(180deg);
           }
         }
+
+        @media (max-width:576px) {
+          font-size: 8px;
+        }
       }
       .logo__triangle {
         transition: transform 0.3s ease;
@@ -195,13 +189,11 @@ z-index: 1;
           top: 5px;
           right: 3px;
         }
-        // @media (max-width: 992px) {
-        //   max-width: 75px;
-        // }
 
-        // @media (max-width: 992px) {
+        @media (max-width:576px) {
+          top: 2px;
+        }
 
-        // }
       }
       .city__name {
         color: #fff;
@@ -210,10 +202,17 @@ z-index: 1;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+        @media (max-width:576px) {
+          font-size: 16px;
+        }
       }
 
       @media (max-width:992px) {
         width: 135px;
+      }
+      @media (max-width:576px) {
+        width: 95px;;
       }
     }
   }
@@ -221,6 +220,9 @@ z-index: 1;
   .burger-menu {
     @media (min-width: 993px) {
       display: none;
+    }
+    @media (max-width: 576px) {
+      margin-left: auto;
     }
 
     position: relative;
@@ -297,5 +299,9 @@ z-index: 1;
   }
   @media (max-width: 992px) {
     justify-content: space-between;
+  }
+
+  @media (max-width:576px) {
+    justify-content:flex-start;
   }
 }
