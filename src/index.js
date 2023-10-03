@@ -9,7 +9,6 @@ const popup = document.querySelector(".popup__wrapper")
 const select = document.querySelector("#select")
 const selectOptions = document.querySelectorAll(".select__value")
 const cityName = document.querySelector(".city__name")
-console.log(selectOptions)
 
 const email = form.querySelector("#email")
 const tel = form.querySelector("#tel")
@@ -86,7 +85,6 @@ function telValidator(input) {
 }
 
 function telHandler(input) {
-  console.log(input)
   const value = input.value.replace(/[^\d+]+/g, "")
   if (value.length > 18) {
     input.value = value.slice(0, 18)
