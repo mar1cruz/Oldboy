@@ -1,6 +1,7 @@
 @import "./reset.scss";
 @import "./fonts.scss";
 @import "./header.scss";
+@import "./preview.scss";
 
 body {
   overflow: hidden;
@@ -15,9 +16,10 @@ section {
   background: url("../resources/img/background-image.png");
 }
 
-.brown-text{
-  color: #D29C4E;
+.brown-text {
+  color: #d29c4e;
 }
+
 .container {
   margin: 0 auto;
   max-width: 1100px;
