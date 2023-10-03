@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oldboy</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header container">
+        <a class="header__logo" href="#">
+          <svg class="logo">
+            <use xlink:href="../resources/icons/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <nav class="header__navigation">
+          <ul>
+            <li><a href="#" class="navigation__link">ГЛАВНАЯ</a></li>
+            <li><a href="#" class="navigation__link">УСЛУГУ</a></li>
+            <li><a href="#" class="navigation__link">БЛОГ</a></li>
+            <li><a href="#" class="navigation__link">ФРАНШИЗА</a></li>
+            <li><a href="#" class="navigation__link">ИНВЕСТИЦИИ</a></li>
+            <li><a href="#" class="navigation__link">ВАКАНСИИ</a></li>
+            <li><a href="#" class="navigation__link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__info">
+          <p class="info__tel">8 800 2345 973</p>
+          <p class="info__text">заказать обратный звонок</p>
+        </div>
+
+        <div class="header__city">
+          <div class="city__logo">
+            <svg class="logo__mark">
+              <use xlink:href="../resources/icons/sprite.svg#mark"></use>
+            </svg>
+          </div>
+          <div class="city__wrapper">
+            <p id="select" class="city__select">
+              ВЫБЕРИ СВОЙ БАРБЕРШОП:
+              <div class="select">
+                <p class="select__value">ПИТЕР</p>
+                <p class="select__value">МИНСК</p>
+                <p class="select__value">ОМС</p>
+              </div>
+
+              <svg class="logo__triangle">
+                <use xlink:href="../resources/icons/sprite.svg#triangle"></use>
+              </svg>
+            </p>
+
+            <p class="city__name">МОСКВА</p>
+          </div>
+        </div>
+
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <main>
+        <section class="preview container">
+          <div class="preview-body">
+            <div class="body__top">
+              <p class="title__little dash">стань</p>
+              <p class="title__little">владельцем</p>
+              <h1 class="body__title">барбершопа</h1>
+              <p class="body__text"><span class="brown-text">крупнейшей в мире сети</span></p>
+              <p class="body__text">oldboy barbershop</p>
+            </div>
+            <div class="body__under">
+              <span class="brown-text">зарабатывай</span>
+              <p>250 000 рублей <span class="brown-text">в месяц</span></p>
+
+              <svg class="plus">
+                <use xlink:href="../resources/icons/sprite.svg#plus"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="preview__form">
+            <form novalidate id="form" class="form" action="#">
+              <h3 class="form__title"><span class="brown-text">заполни форму</span></h3>
+              <p class="form__text">и мы вышлем фин. модель на твою почту</p>
+              <div class="form__body">
+                <input type="name" placeholder="ИМЯ" />
+                <input id="tel" type="tel" placeholder="ТЕЛЕФОН" value="+7" />
+                <input id="email" type="email" placeholder="E-MAIL" />
+              </div>
+
+              <label class="checkbox-wrapper" for="checkbox">
+                <input id="checkbox" type="checkbox" class="castom-checkbox" />
+                <label for="checkbox"></label>
+
+                <div class="wrapper__text">
+                  <p class="checkbox__text">Я соглашаюсь с</p>
+                  <p class="checkbox__text"><span class="brown-text">ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ</span></p>
+                </div>
+              </label>
+
+              <button class="form__btn" type="submit">отправить</button>
+            </form>
+          </div>
+        </section>
+
+        <div class="wrapper-popup">
+          <div class="popup-form">
+            <div class="popup__wrapper">
+              <div class="popup__frame"><img src="../resources/icons/frame.svg" alt="" /></div>
+              <div class="popup__text">сообщение отправлено</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

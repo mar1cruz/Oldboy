@@ -1,0 +1,332 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  &.container {
+    padding-top: 61px;
+  }
+
+  .header__logo {
+    margin-right: 20px;
+
+    .logo {
+      width: 165px;
+      height: 88px;
+
+      @media (max-width: 576px) {
+        width: 85px;
+        height: 45px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      margin-right: 37px;
+    }
+  }
+
+  .header__navigation {
+    ul {
+      margin-right: 60px;
+      display: flex;
+      li:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      .navigation__link {
+        color: #fff;
+        font-family: "Rex";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 992px) {
+      left: 100%;
+      position: fixed;
+      transition: left 0.5s ease;
+
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #d29c4e;
+      z-index: 2;
+
+      ul {
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-self: center;
+        margin-right: 0px;
+        padding: 100px 30px 30px 30px;
+
+        @media (max-width: 576px) {
+          padding: 70px 15px 15px 15px;
+        }
+      }
+      ul > li:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      &.active {
+        left: 0;
+      }
+    }
+  }
+
+  .header__info {
+    margin-right: 57px;
+    position: relative;
+    z-index: 1;
+    .info__tel,
+    .info__text {
+      color: #fff;
+      text-align: right;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    .info__tel {
+      font-family: "Rex";
+      font-size: 23px;
+      width: 134px;
+    }
+
+    .info__text {
+      position: absolute;
+      width: 158px;
+      bottom: -14px;
+      right: 0;
+      font-family: "OpenSans";
+      font-size: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #d29c4e;
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .header__city {
+    position: relative;
+    display: flex;
+
+    .city__logo {
+      .logo__mark {
+        position: absolute;
+        left: -30px;
+        top: 0;
+        width: 23px;
+        height: 31px;
+      }
+    }
+
+    .city__wrapper {
+      width: 65px;
+
+      .city__select {
+        position: relative;
+        cursor: pointer;
+        color: #d29c4e;
+        font-family: "Rex", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @media (max-width: 576px) {
+          font-size: 8px;
+        }
+      }
+
+      .logo__triangle {
+        transition: transform 0.3s ease;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        width: 8px;
+        height: 8px;
+
+        @media (max-width: 992px) {
+          top: 5px;
+          right: 3px;
+        }
+
+        @media (max-width: 576px) {
+          top: 2px;
+        }
+      }
+      .city__name {
+        color: #fff;
+        font-family: "Rex";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @media (max-width: 576px) {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        width: 135px;
+      }
+      @media (max-width: 576px) {
+        width: 95px;
+      }
+    }
+  }
+
+  .burger-menu {
+    @media (min-width: 993px) {
+      display: none;
+    }
+    @media (max-width: 576px) {
+      margin-left: auto;
+    }
+
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 4px solid #d29c4e;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 3px;
+      background-color: white;
+      transition: transform 0.5s ease;
+      &:first-child,
+      &:last-child {
+        content: "";
+
+        position: absolute;
+        display: block;
+        width: 22px;
+        height: 3px;
+        background-color: white;
+      }
+
+      &:first-child {
+        top: 9px;
+      }
+      &:last-child {
+        bottom: 9px;
+      }
+    }
+
+    &.active {
+      span:nth-child(2) {
+        transform: translate(-30px, 0px) scale(0);
+      }
+
+      span:first-child {
+        transform: rotate(-45deg) translate(-7px, 6px);
+      }
+
+      span:last-child {
+        transform: rotate(45deg) translate(-7px, -7px);
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 100%;
+
+    width: 100%;
+    height: 100%;
+
+    transition: 0.3s ease;
+    background-color: #d29c4e;
+
+    &.active {
+      right: 0%;
+      .burger-menu {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  // .select {
+  //   &.active {
+  //     .select {
+  //
+
+  //       position: absolute;
+
+  //       .select__value {
+  //       }
+  //     }
+  //     .logo__triangle {
+  //       transform: rotate(180deg);
+  //     }
+  //   }
+  // }
+
+  .select {
+    position: fixed;
+    z-index: -1;
+  }
+
+  .select.active {
+    z-index: 1;
+    background-color: #d29c4e;
+    width: 60px;
+    height: 119px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 10px;
+
+    .select__value {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 992px) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: 576px) {
+    justify-content: flex-start;
+  }
+}
