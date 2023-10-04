@@ -9,6 +9,8 @@ const popup = document.querySelector(".popup__wrapper")
 const select = document.querySelector("#select")
 const selectOptions = document.querySelectorAll(".select__value")
 const cityName = document.querySelector(".city__name")
+const app = document.querySelector(".app")
+const triangle = document.querySelector(".logo__triangle")
 
 const email = form.querySelector("#email")
 const tel = form.querySelector("#tel")
@@ -34,20 +36,27 @@ links.forEach((link) => {
 })
 
 select.addEventListener("click", (e) => {
-  console.log(e.target)
   select.nextElementSibling.classList.toggle("active")
+  triangle.classList.toggle("active")
 })
 
 document.addEventListener("keydown", (e) => {
   if (popup.classList.contains("active") && e.key === "Escape") {
     popup.classList.remove("active")
+    app.classList.remove("blur")
   }
 })
 
 document.addEventListener("click", (e) => {
-  if (!popup.contains(e.target)) popup.classList.remove("active")
+  if (!popup.contains(e.target)) {
+    popup.classList.remove("active")
+    app.classList.remove("blur")
+  }
 
-  if (!select.contains(e.target)) select.nextElementSibling.classList.remove("active")
+  if (!select.contains(e.target)) {
+    select.nextElementSibling.classList.remove("active")
+    triangle.classList.remove("active")
+  }
 })
 
 burger.addEventListener("click", () => {
@@ -104,5 +113,6 @@ form.addEventListener("submit", (e) => {
 
   if (isEror) return
 
+  app.classList.add("blur")
   popup.classList.add("active")
 })

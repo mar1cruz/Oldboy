@@ -12,11 +12,27 @@ body {
 }
 
 .app {
+  overflow: hidden;
   min-height: 100vh;
   background: url("../resources/img/background-image.webp");
   background: url("../resources/img/background-image.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  &.blur {
+    filter: blur(5px);
+  }
+
+  .app__tel {
+    position: fixed;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
 }
 
 .brown-text {
