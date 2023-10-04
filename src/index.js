@@ -22,9 +22,7 @@ const error = {
 
 selectOptions.forEach((option) => {
   option.addEventListener("click", (e) => {
-    const name = cityName.textContent
     cityName.textContent = e.target.textContent
-    e.target.textContent = name
     select.nextElementSibling.classList.remove("active")
   })
 })
@@ -35,7 +33,8 @@ links.forEach((link) => {
   })
 })
 
-select.addEventListener("click", () => {
+select.addEventListener("click", (e) => {
+  console.log(e.target)
   select.nextElementSibling.classList.toggle("active")
 })
 
@@ -46,9 +45,9 @@ document.addEventListener("keydown", (e) => {
 })
 
 document.addEventListener("click", (e) => {
-  if (!popup.contains(e.target)) {
-    popup.classList.remove("active")
-  }
+  if (!popup.contains(e.target)) popup.classList.remove("active")
+
+  if (!select.contains(e.target)) select.nextElementSibling.classList.remove("active")
 })
 
 burger.addEventListener("click", () => {
